@@ -1,30 +1,19 @@
-2018-12-01 23:50:21,432 ERROR: Exception on /favicon.ico [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
-Traceback (most recent call last):
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1791, in dispatch_request
-    self.raise_routing_exception(req)
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1774, in raise_routing_exception
-    raise request.routing_exception
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/ctx.py", line 336, in match_request
-    self.url_adapter.match(return_rule=True)
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/werkzeug/routing.py", line 1581, in match
-    raise NotFound()
-werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.
-
-During handling of the above exception, another exception occurred:
-
+2018-12-01 23:50:21,338 ERROR: Exception on / [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
     response = self.full_dispatch_request()
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1713, in handle_user_exception
-    return self.handle_http_exception(e)
-  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1644, in handle_http_exception
-    return handler(e)
-  File "/home/araris/Documents/gear_compare/app/errors/handlers.py", line 7, in not_found_error
-    return render_template('errors/404.html'), 404
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/araris/Documents/gear_compare/app/main/routes.py", line 27, in index
+    next_url = next_url, prev_url = prev_url)
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 135, in render_template
     context, ctx.app)
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 117, in _render
@@ -41,7 +30,7 @@ Traceback (most recent call last):
     <li><a href="{{ url_for('main.record_new_data') }}">{{ _('Record New Data') }}</a></li>
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 1005, in render
     return concat(self.root_render_func(self.new_context(vars)))
-  File "/home/araris/Documents/gear_compare/app/templates/errors/404.html", line 1, in top-level template code
+  File "/home/araris/Documents/gear_compare/app/templates/index.html", line 1, in top-level template code
     {% extends "base.html" %}
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 780, in handle_exception
     reraise(exc_type, exc_value, tb)
