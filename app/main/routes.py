@@ -45,7 +45,7 @@ def record_new_data():
         #on the new data, but also will deter the user from trying to input
         #many games at once and risk incorrect data
         return redirect(url_for('main.index'))
-    return render_template('record_new_data.html', title=_('Record New Data'), form=form)
+    return render_template('main.record_new_data.html', title=_('Record New Data'), form=form)
 
 #user specific/profile page
 @bp.route('/user/<username>')
