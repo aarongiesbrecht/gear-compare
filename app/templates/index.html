@@ -2,12 +2,7 @@
 {% import 'bootstrap/wtf.html' as wtf %}
 
 {% block app_content %}
-    {% if current_user.is_authenticated %}
-        <h1>{{ _('Hello, %(username).', username=current_user.username) }}</h1>
-        <div>
-            <p>**put welcome info here**</p>
-        </div>
-    {% endif %}
+    <h1>Hello! and welcome to gear compare.</h1>
 
     <!-- display games using _game subtemplate -->
     {% for game in games %}
