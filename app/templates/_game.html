@@ -10,12 +10,12 @@ sub template for rendering simple game info
              </a>
          </td>
          <td>
-             {$ set user_link $}
+             {% set user_link %}
                 <a href="{{ url_for('main.user', username=game.user.username) }}">
-                    {{ _('%(username') }}
+                    {{ game.user.username }}
                 </a>
             {% endset %}
-            {{ _('%(username)s had a recent efficiency of: ' username = user_link) }}
+            {{ _('%(username)s had a recent efficiency of: ', username = user_link) }}
             {{ game.eff }}
          </td>
      </tr>

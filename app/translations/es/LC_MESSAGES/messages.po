@@ -1,0 +1,97 @@
+# Spanish translations for PROJECT.
+# Copyright (C) 2018 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2018.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2018-12-07 19:21-0800\n"
+"PO-Revision-Date: 2018-12-07 18:46-0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: es\n"
+"Language-Team: es <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: app/auth/routes.py:21
+msgid "Invalid username or password"
+msgstr ""
+
+#: app/auth/routes.py:30
+msgid "Sign In"
+msgstr ""
+
+#: app/auth/routes.py:53
+msgid "register"
+msgstr ""
+
+#: app/main/routes.py:27 app/templates/base.html:25
+msgid "Home"
+msgstr ""
+
+#: app/main/routes.py:49 app/templates/base.html:26
+#: app/templates/record_new_data.html:5
+msgid "Record New Data"
+msgstr ""
+
+#: app/main/routes.py:77 app/templates/edit_clan.html:5
+msgid "Edit Clan Name"
+msgstr ""
+
+#: app/templates/base.html:7
+msgid "Welcome to Gear Compare"
+msgstr ""
+
+#: app/templates/base.html:30
+msgid "Login"
+msgstr ""
+
+#: app/templates/base.html:32
+msgid "Profile"
+msgstr ""
+
+#: app/templates/base.html:33
+msgid "Logout"
+msgstr ""
+
+#: app/templates/index.html:7
+msgid "Hello, $(username)."
+msgstr ""
+
+#: app/templates/index.html:21
+msgid "Newer games"
+msgstr ""
+
+#: app/templates/index.html:26
+msgid "Older games"
+msgstr ""
+
+#: app/templates/user.html:8
+msgid "User"
+msgstr ""
+
+#: app/templates/user.html:16
+msgid "Edit your clan name"
+msgstr ""
+
+#: app/templates/errors/404.html:4
+msgid "Not Found"
+msgstr ""
+
+#: app/templates/errors/404.html:5 app/templates/errors/500.html:6
+msgid "Back"
+msgstr ""
+
+#: app/templates/errors/500.html:4
+msgid "An unexpected error has occurred"
+msgstr ""
+
+#: app/templates/errors/500.html:5
+msgid "The administrator has been notified. Sorry for the inconvenience!"
+msgstr ""
+

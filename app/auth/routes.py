@@ -5,6 +5,7 @@ from app.models import User
 from werkzeug.urls import url_parse
 from app.auth import bp
 from app.auth.forms import LoginForm, RegistrationForm
+from flask_babel import  _
 
 #login form
 @bp.route('/login', methods=['GET', 'POST'])

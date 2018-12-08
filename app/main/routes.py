@@ -1,4 +1,5 @@
-from flask import render_template, redirect, flash, url_for, request, current_app
+from flask import render_template, redirect, flash, url_for, request, current_app, \
+    g, jsonify
 from app import db
 from flask_login import logout_user, current_user, login_user, login_required
 from app.models import User, Game_info
@@ -6,6 +7,8 @@ from werkzeug.urls import url_parse
 
 from app.main import bp
 from app.main.forms import InputForm, EditClanForm
+from flask_babel import get_locale, _
+from app.translate import translate
 
 #base location
 @bp.route('/', methods=['GET', 'POST'])
@@ -16,14 +19,14 @@ def index():
     page = request.args.get('page', 1, type=int)
 
     #paginate with paginate() from SQLAlchemy
-    games = current_user.all_games().paginate(page, current_app.config['GAMES_PER_PAGE'], False)
+    games = User.query.get(1).all_games().paginate(page, current_app.config['GAMES_PER_PAGE'], False)
     #set next page url IF there are more games
     next_url = url_for('main.index', page = games.next_num) \
         if games.has_next else None
     prev_url = url_for('main.index', page = games.prev_num) \
         if games.has_prev else None
 
-    return render_template('index.html', title = 'Home', games = games.items,
+    return render_template('index.html', title=_('Home'), games = games.items,
         next_url = next_url, prev_url = prev_url)
 
 #Data input
@@ -74,3 +77,10 @@ def edit_clan():
     elif request.method == 'GET':
         form.clan_name.data = current_user.clan_name
     return render_template('edit_clan.html', title = _('Edit Clan Name'), form = form)
+
+@bp.route('/translate', methods=['POST'])
+@login_required
+def translate_text():
+    return jsonify({'text': translate(request.form['text'],
+                                      request.form['source_language'],
+                                      request.form['dest_language'])})
