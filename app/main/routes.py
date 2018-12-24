@@ -19,7 +19,8 @@ def index():
     page = request.args.get('page', 1, type=int)
 
     #paginate with paginate() from SQLAlchemy
-    games = User.query.get(1).all_games().paginate(page, current_app.config['GAMES_PER_PAGE'], False)
+    first_user = User.query.get(1)
+    games = first_user.all_games().paginate(page, current_app.config['GAMES_PER_PAGE'], False)
     #set next page url IF there are more games
     next_url = url_for('main.index', page = games.next_num) \
         if games.has_next else None

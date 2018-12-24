@@ -100,3 +100,4 @@ jinja2.exceptions.TemplateSyntaxError: expected token ',', got 'main'
 2018-12-20 21:42:58,940 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
 2018-12-20 22:08:48,713 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
 2018-12-20 22:08:57,855 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-20 22:20:21,754 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
