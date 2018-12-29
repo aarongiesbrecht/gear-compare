@@ -51,6 +51,14 @@ def record_new_data():
         return redirect(url_for('main.index'))
     return render_template('record_new_data.html', title=_('Record New Data'), form=form)
 
+#displays current best load out
+@bp.route('/suggestions', methods=['GET', 'POST'])
+@login_required
+def suggestions():
+
+
+    return render_template('suggestions.html', title = _('loadout suggestions'))
+
 #user specific/profile page
 @bp.route('/user/<username>')
 @login_required
