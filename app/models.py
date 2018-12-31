@@ -44,6 +44,7 @@ class Game_info (db.Model):
     primary = db.Column(db.String(64))
     secondary = db.Column(db.String(64))
     heavy = db.Column(db.String(64))
+    map = db.Column(db.String(64))
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 
