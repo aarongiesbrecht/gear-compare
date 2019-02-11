@@ -17,6 +17,8 @@ sub template for rendering simple game info
             {% endset %}
             {{ _('%(username)s had a recent efficiency of: ', username = user_link) }}
             {{ game.eff }}
+            {{ game.primary }}
+            {{ game.map }}
          </td>
      </tr>
  </table>

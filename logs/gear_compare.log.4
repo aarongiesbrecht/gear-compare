@@ -1,0 +1,100 @@
+2018-12-24 13:04:15,461 ERROR: Exception on /auth/login [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/araris/Documents/gear_compare/app/auth/routes.py", line 31, in login
+    return render_template('auth.login.html', title=_('Sign In'), form=form)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: auth.login.html
+2018-12-31 10:37:52,910 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:37:58,828 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:38:03,732 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:38:13,055 ERROR: Exception on /auth/login [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/araris/Documents/gear_compare/app/auth/routes.py", line 31, in login
+    return render_template('auth.login.html', title=_('Sign In'), form=form)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: auth.login.html
+2018-12-31 10:38:55,636 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:39:00,154 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:39:03,813 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:39:06,462 ERROR: Exception on /auth/login [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/araris/Documents/gear_compare/app/auth/routes.py", line 31, in login
+    return render_template('auth.login.html', title=_('Sign In'), form=form)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: auth.login.html
+2018-12-31 10:44:56,790 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]

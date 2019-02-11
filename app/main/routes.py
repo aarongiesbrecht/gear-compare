@@ -40,16 +40,71 @@ def record_new_data():
         game = Game_info(class_name = form.class_name.data, eff = int(form.eff.data),
             fireteam = form.fireteam.data, primary = form.primary.data,
             secondary = form.secondary.data, heavy = form.heavy.data,
-            user = current_user)
+            map = form.map.data, user = current_user)
         db.session.add(game)
         db.session.commit()
-        flash('Data submition requested on class: {}' .format(form.class_name.data))
+        flash('Data submition successful')
         #once data is submitted the user will be redirected to the home page
         #the home page will not only have been updated to show statistics based
         #on the new data, but also will deter the user from trying to input
         #many games at once and risk incorrect data
         return redirect(url_for('main.index'))
     return render_template('record_new_data.html', title=_('Record New Data'), form=form)
+
+@bp.route('/suggestions', methods=['GET', 'POST'])
+@login_required
+#this page is intended to, on a per map basis, display to the user their
+#current best performing theoretical loadout. this means that primary, secondary,
+#heavy, and class will all be considered seperatly in an effort to suggest
+#new loadouts
+def suggestions():
+    all_games = Game_info.query.all()
+
+
+    mid_games = 0
+    #Midtown primaries
+    mid_p_hc = 0
+    mid_p_ar = 0
+    mid_p_pr = 0
+    mid_p_sc = 0
+    mid_p_bo = 0
+    mid_p_sa = 0
+    mid_p_sg = 0
+    mid_p_sr = 0
+    mid_p_gl = 0
+    mid_primary = {'hc' : mid_p_hc, 'ar' : mid_p_ar, 'pr' : mid_p_pr,
+        'sc' : mid_p_sc, 'bo' : mid_p_bo, 'sa' : mid_p_sa, 'sg' : mid_p_sg,
+        'sr' : mid_p_sr, 'gl' : mid_p_gl}
+    #Midtown secondaries
+    mid_s_hc = 0
+    mid_s_ar = 0
+    mid_s_pr = 0
+    mid_s_sc = 0
+    mid_s_bo = 0
+    mid_s_sa = 0
+    mid_s_sg = 0
+    mid_s_sr = 0
+    mid_s_gl = 0
+    mid_secondary = {'hc' : mid_s_hc, 'ar' : mid_s_ar, 'pr' : mid_s_pr,
+        'sc' : mid_s_sc, 'bo' : mid_s_bo, 'sa' : mid_s_sa, 'sg' : mid_s_sg,
+        'sr' : mid_s_sr, 'gl' : mid_s_gl, 'fr' : mid_s_fr}
+    #Midtown heavies
+    mid_heavy = {'lf' : mid_h_lr, 'rl' : mid_h_rl, 'gl' : mid_h_gl,
+        'mg' : mid_h_mg}
+    mid_class = {}
+    mid_ft = False
+    for map in all_games:
+        #Midtown data suggestions
+        if map.map == "mid":
+            mid_games+=1
+            mid_primary[map.primary]+=1
+            mid_secondary[map.secondary]+=1
+            mid_heavy[map.heavy]+=1
+            mid_class[map.class] = map.class
+            mid_ft = map.fireteam
+
+    return render_template('suggestions.html', title=_('Suggestions'),
+    mid_games = mid_games, mid_p_hc = mid_primary['hc'])
 
 #user specific/profile page
 @bp.route('/user/<username>')

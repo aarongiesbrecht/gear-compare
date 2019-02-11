@@ -8,65 +8,82 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2018-12-07 19:21-0800\n"
+"POT-Creation-Date: 2018-12-31 15:23-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Generated-By: Babel 2.5.1\n"
 
-#: app/auth/routes.py:21
+#: app/translate.py:10
+msgid "Error: the translation service is not configured."
+msgstr ""
+
+#: app/translate.py:18
+msgid "Error: the translation service failed."
+msgstr ""
+
+#: app/auth/routes.py:22
 msgid "Invalid username or password"
 msgstr ""
 
-#: app/auth/routes.py:30
+#: app/auth/routes.py:31
 msgid "Sign In"
 msgstr ""
 
-#: app/auth/routes.py:53
+#: app/auth/routes.py:54
 msgid "register"
 msgstr ""
 
-#: app/main/routes.py:27 app/templates/base.html:25
+#: app/main/routes.py:30 app/templates/base.html:25
 msgid "Home"
 msgstr ""
 
-#: app/main/routes.py:49 app/templates/base.html:26
+#: app/main/routes.py:52 app/templates/base.html:27
 #: app/templates/record_new_data.html:5
 msgid "Record New Data"
 msgstr ""
 
-#: app/main/routes.py:77 app/templates/edit_clan.html:5
+#: app/main/routes.py:58
+msgid "Suggestions"
+msgstr ""
+
+#: app/main/routes.py:86 app/templates/edit_clan.html:5
 msgid "Edit Clan Name"
+msgstr ""
+
+#: app/templates/_game.html:18
+#, python-format
+msgid "%(username)s had a recent efficiency of: "
 msgstr ""
 
 #: app/templates/base.html:7
 msgid "Welcome to Gear Compare"
 msgstr ""
 
-#: app/templates/base.html:30
+#: app/templates/base.html:26
+msgid "suggestions"
+msgstr ""
+
+#: app/templates/auth/login.html:5 app/templates/base.html:31
 msgid "Login"
 msgstr ""
 
-#: app/templates/base.html:32
+#: app/templates/base.html:33
 msgid "Profile"
 msgstr ""
 
-#: app/templates/base.html:33
+#: app/templates/base.html:34
 msgid "Logout"
 msgstr ""
 
-#: app/templates/index.html:7
-msgid "Hello, $(username)."
-msgstr ""
-
-#: app/templates/index.html:21
+#: app/templates/index.html:15
 msgid "Newer games"
 msgstr ""
 
-#: app/templates/index.html:26
+#: app/templates/index.html:20
 msgid "Older games"
 msgstr ""
 
@@ -76,6 +93,10 @@ msgstr ""
 
 #: app/templates/user.html:16
 msgid "Edit your clan name"
+msgstr ""
+
+#: app/templates/auth/registration.html:5
+msgid "Register"
 msgstr ""
 
 #: app/templates/errors/404.html:4

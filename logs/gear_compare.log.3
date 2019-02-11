@@ -1,4 +1,44 @@
-2018-12-31 12:59:29,408 ERROR: Exception on /record_new_data [POST] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
+2018-12-31 10:45:12,983 ERROR: Exception on /auth/register [GET] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
+Traceback (most recent call last):
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/_compat.py", line 35, in reraise
+    raise value
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/araris/Documents/gear_compare/app/auth/routes.py", line 54, in register
+    return render_template('auth.registration.html', title = _('register'), form = form)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 134, in render_template
+    return _render(ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 869, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 830, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/environment.py", line 804, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/jinja2/loaders.py", line 113, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 58, in get_source
+    return self._get_source_fast(environment, template)
+  File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/templating.py", line 86, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: auth.registration.html
+2018-12-31 10:45:28,116 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 10:48:03,074 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 11:57:19,031 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 11:58:21,395 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:10:10,707 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:20:42,168 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:20:45,244 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:21:15,607 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:58:46,506 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+2018-12-31 12:59:05,188 ERROR: Exception on /record_new_data [POST] [in /home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/flask/app.py:1761]
 Traceback (most recent call last):
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/sqlalchemy/engine/base.py", line 1182, in _execute_context
     context)
@@ -69,8 +109,4 @@ Traceback (most recent call last):
     context)
   File "/home/araris/Documents/gear_compare/v_env/lib/python3.7/site-packages/sqlalchemy/engine/default.py", line 470, in do_execute
     cursor.execute(statement, parameters)
-sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 6 - probably unsupported type. [SQL: 'INSERT INTO game_info (class_name, eff, fireteam, "primary", secondary, heavy, map, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('w', 13, 0, 'hc', 'hc', 'rl', <wtforms.fields.core.SelectField object at 0x7feb9d184c50>, 4)]
-2018-12-31 13:02:51,990 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
-2018-12-31 13:18:22,128 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
-2018-12-31 14:47:08,904 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
-2018-12-31 14:47:13,854 INFO: gear_compare startup [in /home/araris/Documents/gear_compare/app/__init__.py:52]
+sqlalchemy.exc.InterfaceError: (sqlite3.InterfaceError) Error binding parameter 6 - probably unsupported type. [SQL: 'INSERT INTO game_info (class_name, eff, fireteam, "primary", secondary, heavy, map, user_id) VALUES (?, ?, ?, ?, ?, ?, ?, ?)'] [parameters: ('h', 13, 1, 'hc', 'sr', 'rl', <wtforms.fields.core.SelectField object at 0x7feb9d3163c8>, 4)]
